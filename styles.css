@@ -54,6 +54,31 @@ section {
 .purple {
   color: #640275;
 }
+.links__hover-effect{
+  position: relative;
+}
+.links__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom:  -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  background-color: black;
+  transition: all 400ms ease;
+}
+
+.links__hover-effect--white::after{
+  background-color: white;
+}
+.links__hover-effect--black::after{
+  background-color: #242424;
+}
+
+.links__hover-effect:hover::after{
+  left: 0;
+  width: 100%;
+}
 
 /*LANDING PAGE*/
 #landing-page {
