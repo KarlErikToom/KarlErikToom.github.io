@@ -23,6 +23,7 @@ button {
 
 section {
   background-color: rgb(245, 245, 245);
+  transition: all 400ms ease;
 }
 
 input,
@@ -113,16 +114,38 @@ textarea:focus {
   width: 100%;
 }
 nav,
-.header{
+.header {
   opacity: 1;
   visibility: visible;
   transition: all 600ms 400ms;
 }
 .modal--open nav,
-.modal--open .header{
+.modal--open .header {
   opacity: 0;
   visibility: hidden;
   transition: all 400ms;
+}
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__links--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+  color: white;
+}
+.dark-theme .links__hover-effect--black::after{
+  background-color: white;
+}
+
+.dark-theme section{
+background-color: #242424;
+}
+.dark-theme .nav__logo{
+  filter: none;
+}
+.dark-theme .mail__btn{
+  background-color: white;
+  color: #242424;
 }
 
 /*LANDING PAGE*/
